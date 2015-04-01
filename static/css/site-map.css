@@ -1,0 +1,45 @@
+@media (max-width: 640px) {
+	
+	.sitemap-main-content{background-image: url(../images_mobile/img-bg-lg.jpg); padding-bottom: 20px;}
+	.map-content .map-content-bg{display: none;}
+	
+	.map-menu{border-radius: 2px; margin-left: 20px; background-color: red; }
+	.map-menu-btn li{float: left;display: block;}
+	.map-content{clear: both;}
+	.map-content-main{padding-top: 20px; padding-left: 20px; font-size: 1.5em;}
+	
+	
+.map-list li:first-child{
+    height: 2.5em;
+    font-size: 1.5em; 
+    margin-top: 1em;
+}
+
+.map-list li:first-child a{
+    color: rgb(120,149,44); 
+    
+}
+
+.map-list  li:not(:first-child){
+    font-size: 1.2em;  
+    color: rgb(172,165,162); 
+}
+
+.map-list  li:not(:first-child) a{
+    color: #9c908d;
+}
+.map-menu{background: transparent;}
+.map-menu-btn{border-radius: 5px;border: 1px solid #ccc;height: 45px;width:305px;margin: auto;background: white;}
+.map-menu-btn li button{
+	padding: 14px 24px;border:none;
+	background: white;
+	font-weight: bold;color: #87b72e;float: left;
+
+}
+.map-menu-btn li:nth-child(2) a{border-right: 1px solid #ccc}
+.map-menu-btn li .active{background: #87b72e;color: white}
+
+
+
+}
+

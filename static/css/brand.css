@@ -1,0 +1,17 @@
+@media (max-width: 640px) {
+	.brand-nav{display: none;}
+	.process-year{display: none;}
+	.brand-process-content-title{display: none;}
+	.brand-process-line{display: none;}
+	.honor-slide-btn{display: none;}
+	
+	.wrapper{position: relative; margin-top: 10px; clear: both;}
+	.brand-process-arrow{ position: absolute; top:50%; width: 90%; padding: 0 5%;}
+	.brand-process-left{float: left;}
+	.brand-process-right{float: right;}
+	
+	/* 相关视频 */
+	/*.baby-video-div{width: 80%; margin: auto; box-shadow: 2px 2px 2px #CCC; padding: 20px; background-color: #FFF; margin-top: 20px;}
+	.baby-video-brief{font-size: 2em;padding-top: 10px;}*/
+}
+

@@ -1,0 +1,70 @@
+@media (max-width: 640px ) {
+	.store-map{display: none;}
+	.main-content{background-image: url(../images_mobile/img-bg-lg.jpg); padding-bottom: 20px;}
+	.store-content{padding-left: 20px;}
+	
+	
+.store-title h1{
+    color:rgb(120,149,44);
+    margin-bottom: 3.5%;
+}
+.store-title h1{text-align: center;}
+.store-title select{
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background:url(../images/img-select-bg.png) no-repeat center center;
+   background-size: 100% 100%;
+   height: 50px;
+   font-size: 1.25em;
+   color: white;
+   width: 80%;
+   padding-left: 10px;
+   margin: auto;
+   display: block;
+   border: 0px;
+   margin-top: 10px;
+}
+.store-title img{margin: auto; width: auto; display: block; margin-top: 10px;}
+.store-list{
+    margin-left: 3.84%;
+    width: 100%;
+    padding-top: 5%;
+}
+
+.store-list ul li{
+    margin-bottom: 5%;
+}
+
+.store-list-div{
+    position: absolute;
+    width: 6%;
+}
+
+.store-list-content{
+      margin-left: 10%;
+}
+
+.store-list-content h1{
+    color:#5f8b1b;
+    margin-bottom: 1%;
+} 
+
+.store-list-content p{
+    color: #303030;
+    font-size: 1.2em;
+}
+
+.store-no-img{
+    width: 100%;
+}
+
+.store-no{
+    position: absolute;
+    top: 23%;
+  left: 36%;
+  color: #ea6c06;
+  font-size: 1em;
+}
+
+}

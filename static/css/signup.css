@@ -1,0 +1,232 @@
+
+* {
+	margin: 0px padding: 0px;
+}
+@media (max-width: 640px) {
+	.left-overlay {
+		display: none;
+	}
+	.right-overlay {
+		display: none;
+	}
+	.main-content {
+		background-image: url(../images_mobile/img-bg-lg.jpg);
+		height: auto;
+		padding-bottom: 20px;
+	}
+	.signup-content {
+		width: 90%;
+		margin: auto;
+		overflow: hidden;
+		height: 1050px;
+	}
+	.login-div {
+		background: url(../images_mobile/login-mb-02.png);
+		background-size: cover;
+		padding: 30px 20px;
+		padding-left: 30px;
+		20px 10px;
+	}
+	.signup-content > img {
+		display: none;
+	}
+	.loing-title-wrapper {
+		height: 50px;
+		width: 100%;
+		;
+	}
+	.signup-icon {
+		clear: both;
+		float: left;
+	}
+	.signup-title {
+		float: left;
+		margin-top: 35px;
+		margin-left: 10px;
+		font-size: 1.3em;
+		line-height: 30px;
+	}
+	.signup-title h1 {
+		color: rgb(120, 149, 44);
+	}
+	.signup-username {
+		/*position: absolute;*/
+	}
+	.signup-password {
+		/*position: absolute;*/
+	}
+	.signup-input-wrapper input {
+		background-color: gray;
+		height: 100%;
+	}
+	.signup-input-wrapper {
+		width: 100%;
+		margin: auto;
+	}
+	input.signupInput {
+		background: #fff;
+		background-repeat: no-repeat;
+		background-position: 0% center;
+		background-size: contain;
+		border: 2px solid #999;
+		font-size: 1.5em;
+		color: rgb(120, 149, 44);
+		border-width: 2px;
+		border-color: #ababab;
+		border-style: solid;
+		outline: none;
+		width: 80%;
+		line-height: 65px;
+		margin-top: 10px;
+	}
+	input.emailInput {
+		background-image: url(../images/img-login-email.png);
+		padding-left: 60px;
+		line-height: 65px;
+	}
+	input.pswInput {
+		background-image: url(../images/img-login-psw.png);
+		padding-left: 60px;
+		line-height: 65px;
+	}
+	input.phoneInput {
+		background-image: url(../images/img-signup-phone.png);
+		padding-left: 60px;
+		line-height: 65px;
+	}
+	.aiheInput::-webkit-input-placeholder {
+		color: #ababab;
+		font-size: 1.5em;
+		vertical-align: middle;
+	}
+	.aiheiInputFouce::-webkit-input-placeholder {
+		color: rgb(120, 149, 44);
+		font-size: 1.5em;
+	}
+	#signup-remember {
+		margin-left: 3.66%;
+		margin-top: 3.33%;
+		width: 2.79%;
+		background: url(../images/img-login-checkbox.jpg) no-repeat;
+		background-size: contain;
+		display: none;
+	}
+	#signup-remember + label {
+		display: inline-block;
+		margin-left: 3.66%;
+		margin-top: 3.33%;
+		width: 15px;
+		height: 15px;
+		background: url(../images/img-login-checkbox.jpg) no-repeat top left;
+		background-size: 100% 100%;
+	}
+	#signup-remember:checked + label {
+		background: url(../images/img-login-checkboxSelected.jpg) no-repeat top left;
+		background-size: 100% 100%
+	}
+	.signup-wrong-text {
+		color: #bd7535;
+		margin-left: 1%;
+		font-size: 1.3em;
+		display: none;
+	}
+	.signup-otherInfo {
+		margin-top: 4%;
+	}
+	.signup-otherInfo span {
+		color: gray;
+		font-size: 1.3em;
+	}
+	.signup-otherInfo a {
+		color: gray;
+		font-size: 1.3em;
+		margin-left: 50%;
+		text-decoration: underline;
+	}
+	.signup-btns {
+		margin-top: 5%;
+		width: 95%;
+		height: auto;
+	}
+	.signup-btns div {
+		margin: 0 auto;
+		margin-top: 10px;
+		height: auto;
+	}
+	.signup-button {
+		cursor: pointer;
+	}
+	.signup-btns img {
+		height: 66px;
+		width: 100%;
+	}
+	.signup-signup-button a {
+		width: 100%;
+		cursor: pointer;
+	}
+	/* baby info*/
+	
+	.signup-babyInfo {} 
+	.signup-babyInfo h1 {
+		color: gray;
+		font-size: 2.5em;
+		margin-top: 20px;
+	}
+	.signup-babyInfo div {
+		padding-top: 1.5%;
+	}
+	.signup-babyInfo div span {
+		font-size: 2em;
+		color: rgb(120, 149, 44);
+	}
+	.signup-babyInfo{line-height:40px; font-size: 1.2em;}
+	.signup-baby-detail{display: none;}
+	.signup-baby-detail span{
+    font-size: 1.8em;
+    color: rgb(120,149,44); 
+  
+}
+.signup-baby-input{
+    padding: 2% 1%;
+    background-color: #d6efb0;
+    height: 10%;
+}
+.signup-success-content{display: none;}
+	/* footer */
+	
+	.footer-watch {
+		background-size: auto;
+	}
+	.footer-site-map {
+		clear: both;
+		font-size: 2em;
+		font-family: "微软雅黑";
+		margin-top: -31px;
+		position: static;
+		height: auto;
+	}
+	.footer-site-map-content {
+		position: static;
+		clear: both;
+	}
+	.footer-site-origin,
+	.footer-site-baby,
+	.footer-site-power {
+		padding-left: 40px;
+		margin-left: 0px;
+		display: block;
+	}
+	.footer-site-origin {} .footer-site-baby {} .footer-site-about div {
+		clear: both;
+		font-size: 2em;
+	}
+	.footer-site-about p {
+		margin-top: 20px;
+		padding-left: 40px;
+		text-align: left;
+	}
+	.footer-site-about .footer-site-about-content p:last-child {
+		font-size: 0.6em;
+	}
+}
+/*content > div > wrapper*/
