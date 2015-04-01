@@ -1,0 +1,27 @@
+﻿
+@media (max-width: 640px) {
+	.left-overlay {
+		display: none;
+	}
+	.right-overlay {
+		display: none;
+	}
+	
+	.footer-watch{background-size: auto; clear: both; border-top: 2px solid #598713;}
+	.footer-site-map{clear:both;font-size: 2em; font-family: "微软雅黑";margin-top: -31px; position: static ; height: auto; }
+	.footer-site-map-content{position: static ; clear:both;}
+	
+	.footer-site-origin,.footer-site-baby,.footer-site-power{padding-left: 40px;  margin-left: 0px; display: block;}
+	.footer-site-origin{}
+	
+	.footer-site-baby{}
+	
+	.footer-site-about div{clear: both; font-size: 2em;}
+	.footer-site-about p{margin-top: 20px; padding-left: 40px; text-align: left;}
+	.footer-site-about .footer-site-about-content p:last-child{font-size: 0.6em;}
+	
+	.notfound-content{background-image:url(../images/404.jpg); background-position: center; height: 800px; }
+	.notfound-text-m{ bottom: 20px;}
+	.notfound-btn{bottom: 0%;}
+	}
+}

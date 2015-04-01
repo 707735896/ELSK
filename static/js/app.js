@@ -1,4 +1,5 @@
 function resize(){
+
 	$("#slider1").find(".pic-wrapper").each(function(){
 		if($(window).width() <= 640){
 			$(this).height($(window).width() * 400.0/640.0);
@@ -10,6 +11,7 @@ function resize(){
 	});
 
 }
+
 
 
 function domReady(fn){
@@ -48,20 +50,28 @@ domReady(function(){
 
 
 jQuery(document).ready(function($){
-	// resize();
 
-	// $(window).resize(function(){
-	// 	resize();
-	// });
+	//首页弹出商品信息
+	$('#frm-close').click(function(){
+		$(this).parents('.home-step-moile-open').hide();
+		
+	});
+	
+	
+	// resize();
+//	 $(window).resize(function(){
+//	 	//resize();
+//	 	
+//	 });
 
 	$("#navIcon").click(function(e){
 		e.preventDefault();
 		if($(".header-nav").css("max-height") === "0px"){
-			$(".header-nav").css({"max-height": "35em"});
+			$(".header-nav").css({"max-height": "45em",'padding-bottom':'20px'});
 			//$(this).removeClass("hide-block");
 			
 		}else{
-			$(".header-nav").css({"max-height": "0"})
+			$(".header-nav").css({"max-height": "0",'padding-bottom':'0px'})
 			//$(".header-nav").addClass("hide-block");
 		}
 		
@@ -106,7 +116,7 @@ jQuery(document).ready(function($){
 	});
 
 	$(".home-step-step1-more").bind('mouseenter', function(event) {
-		$("#"+$(this).attr("id")+"_content").css('display', 'inline-block');
+		$("#"+$(this).attr("id")+"_content").css('display', 'block');
 
 	}).bind('mouseleave',function(e){
 		$("#"+$(this).attr("id")+"_content").css('display', 'none');
@@ -438,9 +448,112 @@ jQuery(document).ready(function($){
 	$(".brand-pic-overlay").click(function(){
 		$(".brand-pic-overlay").css('display', 'none');
 	});
-	
 
+
+
+		
+//初始化调用改变事件方法
+resizeE();
+//改变首页的事件
+function resizeE(){
+	if($(window).width()<=640)
+    {
+    	ltBindEvent();
+    }else{
+    	ltUnbindEvent();
+    }
+}
+/**
+ * 生成
+ */
+function RendHtml()
+{
+	var openFrm=$("<div id='Power-openFrm' style='display:block;' class='home-step-moile-open'>");
+		var of2=$('<div class="home-step-moile-open-frm">');
+		openFrm.append(of2);
+		var close=$("<div id='frm-close' style='font-size:2.5em'>");
+		close.text('x');
+		of2.append(close);
+		var of3=$("<div class='home-step-moile-open-frm-content' style='font-size:1.5em'>");
+      	of3.append($("<img src='images/img-product.jpg'>"));
+      	of3.append($("<h3>呵护婴儿护肤霜</h3>"));
+      	of3.append($("<p>每一位怀孕的妈妈都希望能使用更天然的护肤产品，呵护肌肤，更呵护腹中的宝宝。嗳呵发现天然酵素中蕴含的神奇活性能给妈妈肌肤创造贴身保护,在她的肌肤表面形成一层透气天然屏障，抵御外界污染刺激，改善孕、育期妈咪肌肤状态给与宝宝和妈妈最贴心的保护。因此，嗳呵甄选四种天然植物中的活性酵素• </p>"));
+      	of3.append($("<h3>【媒体推荐】</h3>"));
+      	of3.append($("<img height='40px' width='200px' src='images/未标题-1_02.png'>"));
+      	of3.append($("<img height='40px' width='200px' src='images/未标题-1_03.gif'>"));
+      	of3.append($("<img height='40px' width='200px' src='images/未标题-1_04.gif'>"));
+      	of2.append(of3);
+      	return openFrm;
+}
+//大于640卸载mobile事件 绑定PC事件
+function ltBindEvent(){
+		//首页产品
+		$('.home-step-step1-more').unbind();
+		$('.home-step-step1-more').click(function(){
+			$('.home-step-step1-more').parents('.home-step-step1-list').find('.home-step-moile-open').show();
+		});
+		//产品页
+	$('.power-product-detail').unbind();
+	$('.power-product-detail').click(function()
+	{
+		var pid=$(this).attr('productid');//获取产品编号Ajax获取信息
+
+		$('body').append(RendHtml());	
+		$('#frm-close').click(function(){
+				$(this).parents('.home-step-moile-open').remove();
+		});
+	})
+	//产品页2
+	$('.product-product-detail').unbind();
+	$('.product-product-detail').click(function()
+	{
+		var pid=$(this).attr('productid');//获取产品编号Ajax获取信息
+
+		$('body').append(RendHtml());	
+		$('#frm-close').click(function(){
+				$(this).parents('.home-step-moile-open').remove();
+		});
+	})
+}
+
+//小于640卸载PC事件 绑定Mobile事件
+function ltUnbindEvent(){
+	//首页
+	$('.home-step-step1-more').unbind();
+	$('#Power-openFrm').remove();
+	$(".home-step-step1-more").bind('mouseenter', function(event) {
+			$("#"+$(this).attr("id")+"_content").css('display', 'block');
 	
-	
+	}).bind('mouseleave',function(e){
+			$("#"+$(this).attr("id")+"_content").css('display', 'none');
+	});
+	//产品页
+	$('.power-product-detail').unbind();
+	//power页面 鼠标移动到产品上
+	$(".power-product-detail").bind('mouseenter', function(event) {
+		$(this).find($(".power-product-hover-wrapper")).css("display","block");
+	}).bind('mouseleave',function(e){
+		$(this).find($(".power-product-hover-wrapper")).css("display","none");
+		$(this).find($(".product-hover-content")).css("display","none");
+	});
+	//product页面 鼠标移动到产品上
+	$('.product-product-detail').unbind();
+	$(".product-product-detail").bind('mouseenter', function(event) {
+		$(this).find($(".power-product-hover-wrapper")).css("display","block");
+	}).bind('mouseleave',function(e){
+		$(this).find($(".power-product-hover-wrapper")).css("display","none");
+		$(this).find($(".product-hover-content")).css("display","none");
+	});
+	//产品页1
+		
+
+}
+
+
+//窗口发生改变
+$(window).resize(function () {   
+	resizeE();
+});
+
 
 });
